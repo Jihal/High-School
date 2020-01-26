@@ -1,0 +1,31 @@
+Ask user for number of excursions
+For counter=0 to number of excursions inputted by user:
+	value = None
+	While value is not 0:
+		Prompt user for direction
+		If direction is 0:
+			Break the loop to store direction in a seperate list
+		Else:
+			Store the inputted value for future use
+
+For counter=0 to number of excursions inputted by user:
+	Set current direction to 0 degrees
+	Set current x coordinate to 0 
+	Set current y coordinate to 0
+	For counter2=0 to number of values of directions in current excursion:
+		Check if user input is 2: 
+			Add 90 degrees to current direction
+			If current direction is equal to 360 degrees:
+				Set current direction back to 0
+		Check if user input is 3:
+			Subtract 90 degrees to current direction
+			If current direction is less then 0 degrees:
+				Set current direction to 270
+		Check if user input is 1:
+			If next user input is also 1:
+				Add or subtract 1 to x or y depending on the direction value
+				Set value of next user input to 0 (So it doesn't add anything, won't exit program since I store values before)
+			Else: 
+				Add or subtract user input to x or y depending on the direction value
+	Print the shortest distance back which is the absolute value of x plus the absolute value of y
+	Print the directions for the way back taking in count of positive or negative x or y values and directions
